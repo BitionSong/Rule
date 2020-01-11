@@ -1,5 +1,5 @@
 /*
-README：https://raw.githubusercontent.com/BitionSong/rule/master/surge3/Scripts
+README：https://raw.githubusercontent.com/BitionSong/Rule/master/Scripts/
  */
 
 const path1 = "/interface/sdk/sdkad.php";
