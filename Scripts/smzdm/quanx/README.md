@@ -16,7 +16,7 @@
 *.smzdm.com
 
 [rewrite_local]
-^https:\/\/www\.smzdm\.com\/?.? url script-response-body smzdm.cookie.js
+^https:\/\/www\.smzdm\.com\/?.? url script-request-header smzdm.cookie.js
 
 [task_local]
 1 0 * * * smzdm.js

@@ -7,7 +7,7 @@
 music.163.com
 
 [rewrite_local]
-^https:\/\/music\.163\.com\/m\/?.? url script-response-body neteasemusic.cookie.js
+^https:\/\/music\.163\.com\/m\/?.? url script-request-header neteasemusic.cookie.js
 
 [task_local]
 1 0 * * * neteasemusic.js

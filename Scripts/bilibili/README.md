@@ -22,7 +22,7 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/BitionSong/rul
 *.bilibili.com
 
 [rewrite_local]
-^https:\/\/(www|live)\.bilibili\.com\/?.? url script-response-body bilibili.cookie.js
+^https:\/\/(www|live)\.bilibili\.com\/?.? url script-request-header bilibili.cookie.js
 
 [task_local]
 1 0 * * * bilibili.js

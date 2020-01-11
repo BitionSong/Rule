@@ -26,7 +26,7 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 *.video.qq.com
 
 [rewrite_local]
-^https:\/\/vip\.video\.qq\.com\/?.? url script-response-body videoqq.cookie.js
+^https:\/\/vip\.video\.qq\.com\/?.? url script-request-header videoqq.cookie.js
 
 [task_local]
 1 0 * * * videoqq.js

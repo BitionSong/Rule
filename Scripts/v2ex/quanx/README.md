@@ -7,7 +7,7 @@
 *.v2ex.com
 
 [rewrite_local]
-^https:\/\/www\.v2ex\.com\/mission\/daily url script-response-body v2ex.cookie.js
+^https:\/\/www\.v2ex\.com\/mission\/daily url script-request-header v2ex.cookie.js
 
 [task_local]
 1 0 * * * v2ex.js
