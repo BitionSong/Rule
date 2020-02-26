@@ -3,7 +3,7 @@
 USER-AGENT,NeteaseMusic*,Netease Music
 HOST-SUFFIX,music.126.net,Netease Music
 HOST-SUFFIX,music.163.com,Netease Music
-HOST-SUFFIX,59.111.181.38,Netease Music
+# HOST-SUFFIX,59.111.181.38,Netease Music
 HOST-SUFFIX,59.111.181.60,Netease Music
 HOST-SUFFIX,223.252.199.66,Netease Music
 HOST-SUFFIX,223.252.199.67,Netease Music
