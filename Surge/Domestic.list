@@ -19,20 +19,6 @@ DOMAIN-SUFFIX,battle.net
 DOMAIN-SUFFIX,battlenet.com
 DOMAIN-SUFFIX,blizzard.com
 
-# > Microsoft
-USER-AGENT,OneDrive*
-DOMAIN-KEYWORD,microsoft
-DOMAIN-SUFFIX,hotmail.com
-DOMAIN-SUFFIX,live.com
-DOMAIN-SUFFIX,live.net
-DOMAIN-SUFFIX,msn.com
-DOMAIN-SUFFIX,office.com
-DOMAIN-SUFFIX,office.net
-DOMAIN-SUFFIX,outlook.com
-DOMAIN-SUFFIX,windows.com
-DOMAIN-SUFFIX,windows.net
-DOMAIN-SUFFIX,windowsupdate.com
-
 # > Prior
 DOMAIN,client.amplifi.com
 DOMAIN,ip.bjango.com
@@ -46,10 +32,6 @@ DOMAIN-SUFFIX,playstation.net
 DOMAIN-SUFFIX,playstationnetwork.com
 DOMAIN-SUFFIX,sony.com
 DOMAIN-SUFFIX,sonyentertainmentnetwork.com
-
-# > Steam
-USER-AGENT,Steam*
-DOMAIN-SUFFIX,steamcontent.com
 
 # > TeamViewer
 IP-CIDR,185.188.32.0/24,no-resolve
@@ -81,14 +63,15 @@ DOMAIN-SUFFIX,air-matters.com
 DOMAIN-SUFFIX,air-matters.io
 DOMAIN-SUFFIX,aixifan.com
 DOMAIN-SUFFIX,akadns.net
+DOMAIN-SUFFIX,alibabacloud.com
 DOMAIN-SUFFIX,alicdn.com
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,aliyun.com
+DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,apache.org
 DOMAIN-SUFFIX,api.crisp.chat
-DOMAIN-SUFFIX,api.termius.com
 DOMAIN-SUFFIX,appshike.com
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,autonavi.com
