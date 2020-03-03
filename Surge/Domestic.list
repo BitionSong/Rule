@@ -8,6 +8,9 @@ USER-AGENT,ting_en
 USER-AGENT,WebTorrent*
 USER-AGENT,WeChat*
 
+# > chiphell
+DOMAIN-KEYWORD,chiphell
+
 # > PayPal
 DOMAIN-KEYWORD,paypal
 
