@@ -1,15 +1,8 @@
-# > UA
-USER-AGENT,hide*
-USER-AGENT,MicroMessenger*
-USER-AGENT,PayPal*
-USER-AGENT,TeamViewer*
-USER-AGENT,TIM*
-USER-AGENT,ting_en
-USER-AGENT,WebTorrent*
-USER-AGENT,WeChat*
-
 # > PayPal
+USER-AGENT,PayPal*
 DOMAIN-KEYWORD,paypal
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypalobjects.com
 
 # > Beplay
 DOMAIN-KEYWORD,beplay
