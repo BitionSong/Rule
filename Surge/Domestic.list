@@ -4,6 +4,9 @@ DOMAIN-KEYWORD,paypal
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypalobjects.com
 
+# > Tophub
+DOMAIN-SUFFIX,tophub.today
+
 # > Beplay
 DOMAIN-KEYWORD,beplay
 
