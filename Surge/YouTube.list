@@ -7,7 +7,6 @@ DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,youtu.be
 
    
-# > Youtube_Music
+# > Youtube Music
 USER-AGENT,*YouTubeMusic*
 USER-AGENT,*com.google.ios.youtubemusic*
-PROCESS-NAME,YT Music
