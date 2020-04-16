@@ -32,10 +32,6 @@ IP-CIDR,185.188.32.0/24,Domestic,no-resolve
 IP-CIDR,185.188.33.0/24,Domestic,no-resolve
 IP-CIDR,185.188.34.0/24,Domestic,no-resolve
 IP-CIDR,185.188.35.0/24,Domestic,no-resolve
-# IP-CIDR6,2a0b:b580::/48,Domestic,no-resolve
-# IP-CIDR6,2a0b:b581::/48,Domestic,no-resolve
-# IP-CIDR6,2a0b:b582::/48,Domestic,no-resolve
-# IP-CIDR6,2a0b:b583::/48,Domestic,no-resolve
 
 DOMAIN-SUFFIX,12306.cn,Domestic
 DOMAIN-SUFFIX,12306.com,Domestic
