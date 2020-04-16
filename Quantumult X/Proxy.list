@@ -1,3 +1,4 @@
+# > Line
 DOMAIN-SUFFIX,lin.ee,PR0XY
 DOMAIN-SUFFIX,line.me,PR0XY
 DOMAIN-SUFFIX,line.naver.jp,PR0XY
@@ -5,16 +6,24 @@ DOMAIN-SUFFIX,line-apps.com,PR0XY
 DOMAIN-SUFFIX,line-cdn.net,PR0XY
 DOMAIN-SUFFIX,line-scdn.net,PR0XY
 DOMAIN-SUFFIX,nhncorp.jp,PR0XY
+
+# > Sony
 DOMAIN-SUFFIX,playstation.com,PR0XY
 DOMAIN-SUFFIX,playstation.net,PR0XY
 DOMAIN-SUFFIX,playstationnetwork.com,PR0XY
 DOMAIN-SUFFIX,sony.com,PR0XY
 DOMAIN-SUFFIX,sonyentertainmentnetwork.com,PR0XY
+
+# > Spark
 DOMAIN-SUFFIX,api.amplitude.com,PR0XY
 DOMAIN-SUFFIX,app.smartmailcloud.com,PR0XY
 DOMAIN-SUFFIX,gate.hockeyapp.net,PR0XY
 DOMAIN-SUFFIX,smartmailcloud.com,PR0XY
+
+# > Zooba
 USER-AGENT,battleroyale*,PR0XY
+
+# > Top blocked sites
 DOMAIN-SUFFIX,2o7.net,PR0XY
 DOMAIN-SUFFIX,4everProxy.com,PR0XY
 DOMAIN-SUFFIX,4shared.com,PR0XY
@@ -649,8 +658,12 @@ DOMAIN-SUFFIX,unfiltered.news,PR0XY
 DOMAIN-SUFFIX,waveprotocol.org,PR0XY
 DOMAIN-SUFFIX,webmproject.org,PR0XY
 DOMAIN-SUFFIX,webrtc.org,PR0XY
+
+# > V2EX
 DOMAIN-SUFFIX,v2ex.com,PR0XY
+
 DOMAIN-KEYWORD,dlercloud,PR0XY
+# > Amazon
 IP-CIDR,13.32.0.0/16,PR0XY,no-resolve
 IP-CIDR,13.33.0.0/16,PR0XY,no-resolve
 IP-CIDR,13.35.0.0/17,PR0XY,no-resolve
@@ -667,6 +680,8 @@ IP-CIDR,54.156.0.0/14,PR0XY,no-resolve
 IP-CIDR,54.226.0.0/15,PR0XY,no-resolve
 IP-CIDR,54.230.156.0/22,PR0XY,no-resolve
 IP-CIDR,54.93.0.0/16,PR0XY,no-resolve
+
+# > Facebook
 IP-CIDR,103.4.96.0/22,PR0XY,no-resolve
 IP-CIDR,129.134.0.0/17,PR0XY,no-resolve
 IP-CIDR,157.240.0.0/17,PR0XY,no-resolve
@@ -682,14 +697,20 @@ IP-CIDR,66.220.144.0/20,PR0XY,no-resolve
 IP-CIDR,69.171.224.0/19,PR0XY,no-resolve
 IP-CIDR,69.63.176.0/20,PR0XY,no-resolve
 IP-CIDR,74.119.76.0/22,PR0XY,no-resolve
+
+# > Google
 IP-CIDR,173.194.0.0/16,PR0XY,no-resolve
 IP-CIDR,74.125.0.0/16,PR0XY,no-resolve
+
+# > Kakao Talk
 IP-CIDR,1.201.0.0/24,PR0XY,no-resolve
 IP-CIDR,103.246.56.0/22,PR0XY,no-resolve
 IP-CIDR,103.27.148.0/22,PR0XY,no-resolve
 IP-CIDR,110.76.140.0/22,PR0XY,no-resolve
 IP-CIDR,113.61.104.0/22,PR0XY,no-resolve
 IP-CIDR,27.0.236.0/22,PR0XY,no-resolve
+
+# > LINE
 IP-CIDR,103.2.28.0/22,PR0XY,no-resolve
 IP-CIDR,119.235.224.0/21,PR0XY,no-resolve
 IP-CIDR,119.235.232.0/23,PR0XY,no-resolve
@@ -703,10 +724,14 @@ IP-CIDR,203.104.103.0/24,PR0XY,no-resolve
 IP-CIDR,203.104.128.0/20,PR0XY,no-resolve
 IP-CIDR,203.174.66.64/26,PR0XY,no-resolve
 IP-CIDR,203.174.77.0/24,PR0XY,no-resolve
+
+# > Potato Chat
 IP-CIDR,13.251.24.157/24,PR0XY,no-resolve
 IP-CIDR,13.251.41.203/24,PR0XY,no-resolve
 IP-CIDR,17.252.156.147/24,PR0XY,no-resolve
 IP-CIDR,17.252.157.26/24,PR0XY,no-resolve
+
+# > SoftLayer
 IP-CIDR,74.86.0.0/16,PR0XY,no-resolve
 IP-CIDR,75.126.0.0/16,PR0XY,no-resolve
 IP-CIDR,174.37.0.0/16,PR0XY,no-resolve
