@@ -1,153 +1,68 @@
-# > ABC
-DOMAIN-SUFFIX,edgedatg.com,Pr0xy
-DOMAIN-SUFFIX,go.com,Pr0xy
-
-# > Abema TV
-USER-AGENT,AbemaTV*,Pr0xy
-DOMAIN-SUFFIX,abema.io,Pr0xy
-DOMAIN-SUFFIX,akamaized.net,Pr0xy
-DOMAIN-SUFFIX,ameba.jp,Pr0xy
-DOMAIN-SUFFIX,hayabusa.io,Pr0xy
-
-# > Amazon Prime Video
-USER-AGENT,InstantVideo.US*,Pr0xy
-USER-AGENT,Prime%20Video*,Pr0xy
-DOMAIN-SUFFIX,aiv-cdn.net,Pr0xy
-DOMAIN-SUFFIX,amazonaws.com,Pr0xy
-DOMAIN-SUFFIX,amazonvideo.com,Pr0xy
-DOMAIN-SUFFIX,llnwd.net,Pr0xy
-
-# > Apple TV
-DOMAIN,np-edge.itunes.apple.com,Pr0xy
-DOMAIN,play-edge.itunes.apple.com,Pr0xy
-DOMAIN-SUFFIX,tv.apple.com,Pr0xy
-
-# > Bahamut
-USER-AGENT,Anime*,Pr0xy
-DOMAIN-SUFFIX,bahamut.com.tw,Pr0xy
-DOMAIN-SUFFIX,gamer.com.tw,Pr0xy
-DOMAIN-SUFFIX,hinet.net,Pr0xy
-
-# > BBC
-USER-AGENT,BBCiPlayer*,Pr0xy
-DOMAIN-KEYWORD,bbcfmt,Pr0xy
-DOMAIN-KEYWORD,co.uk,Pr0xy
-DOMAIN-KEYWORD,uk-live,Pr0xy
-DOMAIN-SUFFIX,bbc.co,Pr0xy
-DOMAIN-SUFFIX,bbc.co.uk,Pr0xy
-DOMAIN-SUFFIX,bbc.com,Pr0xy
-DOMAIN-SUFFIX,bbci.co,Pr0xy
-DOMAIN-SUFFIX,bbci.co.uk,Pr0xy
-
-# > CHOCO TV
-USER-AGENT,TwDramas*,Pr0xy
-DOMAIN-SUFFIX,chocotv.com.tw,Pr0xy
-
-# > Disney Plus
-USER-AGENT,Disney*,Pr0xy
-DOMAIN,cdn.registerdisney.go.com,Pr0xy
-DOMAIN-SUFFIX,disneyplus.com,Pr0xy
-DOMAIN-SUFFIX,disney-plus.net,Pr0xy
-DOMAIN-SUFFIX,dssott.com,Pr0xy
-DOMAIN-SUFFIX,bamgrid.com,Pr0xy
-DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com,Pr0xy
-
-# > Now E
-USER-AGENT,PCCW*,Pr0xy
-DOMAIN-KEYWORD,nowe,Pr0xy
-DOMAIN,bcbolthboa-a.akamaihd.net,Pr0xy
-DOMAIN-SUFFIX,nowe.com,Pr0xy
-DOMAIN-SUFFIX,youboranqs01.com,Pr0xy
-
-# > Epicgames
-DOMAIN-KEYWORD,epicgames,Pr0xy
-DOMAIN-SUFFIX,helpshift.com,Pr0xy
-
-# > Fox+
-USER-AGENT,FOX%20NOW*,Pr0xy
-USER-AGENT,FOXPlus*,Pr0xy
-DOMAIN-KEYWORD,foxplus,Pr0xy
-DOMAIN-SUFFIX,config.fox.com,Pr0xy
-DOMAIN-SUFFIX,emome.net,Pr0xy
-DOMAIN-SUFFIX,fox.com,Pr0xy
-DOMAIN-SUFFIX,foxdcg.com,Pr0xy
-DOMAIN-SUFFIX,foxnow.com,Pr0xy
-DOMAIN-SUFFIX,foxplus.com,Pr0xy
-DOMAIN-SUFFIX,foxplay.com,Pr0xy
-DOMAIN-SUFFIX,ipinfo.io,Pr0xy
-DOMAIN-SUFFIX,mstage.io,Pr0xy
-DOMAIN-SUFFIX,now.com,Pr0xy
-DOMAIN-SUFFIX,theplatform.com,Pr0xy
-DOMAIN-SUFFIX,urlload.net,Pr0xy
-
-# > HBO && HBO Go
-USER-AGENT,HBO%20NOW*,Pr0xy
-DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,Pr0xy
-DOMAIN-SUFFIX,hbo.com,Pr0xy
-DOMAIN-SUFFIX,hboasia.com,Pr0xy
-DOMAIN-SUFFIX,hbogo.com,Pr0xy
-DOMAIN-SUFFIX,hbogoasia.com,Pr0xy
-DOMAIN-SUFFIX,hbogoasia.hk,Pr0xy
+DOMAIN-SUFFIX,hbo.com,PR0XY
+DOMAIN-SUFFIX,hboasia.com,PR0XY
+DOMAIN-SUFFIX,hbogo.com,PR0XY
+DOMAIN-SUFFIX,hbogoasia.com,PR0XY
+DOMAIN-SUFFIX,hbogoasia.hk,PR0XY
 
 # > Hulu
-USER-AGENT,Hulu*,Pr0xy
-DOMAIN-SUFFIX,happyon.jp,Pr0xy
-DOMAIN-SUFFIX,hulu.com,Pr0xy
-DOMAIN-SUFFIX,huluim.com,Pr0xy
-DOMAIN-SUFFIX,hulustream.com,Pr0xy
+USER-AGENT,Hulu*,PR0XY
+DOMAIN-SUFFIX,happyon.jp,PR0XY
+DOMAIN-SUFFIX,hulu.com,PR0XY
+DOMAIN-SUFFIX,huluim.com,PR0XY
+DOMAIN-SUFFIX,hulustream.com,PR0XY
 
 # > Imkan
-DOMAIN-SUFFIX,imkan.tv,Pr0xy
+DOMAIN-SUFFIX,imkan.tv,PR0XY
 
 # > JOOX
-USER-AGENT,WeMusic*,Pr0xy
-USER-AGENT,JOOX*,Pr0xy
-DOMAIN-SUFFIX,joox.com,Pr0xy
+USER-AGENT,WeMusic*,PR0XY
+USER-AGENT,JOOX*,PR0XY
+DOMAIN-SUFFIX,joox.com,PR0XY
 
 # > MytvSUPER
-USER-AGENT,mytv*,Pr0xy
-DOMAIN-KEYWORD,nowtv100,Pr0xy
-DOMAIN-KEYWORD,rthklive,Pr0xy
-DOMAIN-SUFFIX,mytvsuper.com,Pr0xy
-DOMAIN-SUFFIX,tvb.com,Pr0xy
+USER-AGENT,mytv*,PR0XY
+DOMAIN-KEYWORD,nowtv100,PR0XY
+DOMAIN-KEYWORD,rthklive,PR0XY
+DOMAIN-SUFFIX,mytvsuper.com,PR0XY
+DOMAIN-SUFFIX,tvb.com,PR0XY
 
 # > Netflix
-DOMAIN-SUFFIX,netflix.com,Pr0xy
-DOMAIN-SUFFIX,netflix.net,Pr0xy
-DOMAIN-SUFFIX,nflxext.com,Pr0xy
-DOMAIN-SUFFIX,nflximg.com,Pr0xy
-DOMAIN-SUFFIX,nflximg.net,Pr0xy
-DOMAIN-SUFFIX,nflxso.net,Pr0xy
-DOMAIN-SUFFIX,nflxvideo.net,Pr0xy
+DOMAIN-SUFFIX,netflix.com,PR0XY
+DOMAIN-SUFFIX,netflix.net,PR0XY
+DOMAIN-SUFFIX,nflxext.com,PR0XY
+DOMAIN-SUFFIX,nflximg.com,PR0XY
+DOMAIN-SUFFIX,nflximg.net,PR0XY
+DOMAIN-SUFFIX,nflxso.net,PR0XY
+DOMAIN-SUFFIX,nflxvideo.net,PR0XY
 
 # > Pandora
-DOMAIN-SUFFIX,pandora.com,Pr0xy
+DOMAIN-SUFFIX,pandora.com,PR0XY
 
 # > Sky GO
-USER-AGENT,skygo*,Pr0xy
-DOMAIN-SUFFIX,sky.com,Pr0xy
-DOMAIN-SUFFIX,skygo.co.nz,Pr0xy
+USER-AGENT,skygo*,PR0XY
+DOMAIN-SUFFIX,sky.com,PR0XY
+DOMAIN-SUFFIX,skygo.co.nz,PR0XY
 
 # > SoundCloud
-USER-AGENT,SoundCloud*,Pr0xy
+USER-AGENT,SoundCloud*,PR0XY
 
 # > Spotify
-USER-AGENT,*Spotify*,Pr0xy
-DOMAIN-KEYWORD,spotify,Pr0xy
-DOMAIN-SUFFIX,scdn.co,Pr0xy
-DOMAIN-SUFFIX,spoti.fi,Pr0xy
+USER-AGENT,*Spotify*,PR0XY
+DOMAIN-KEYWORD,spotify,PR0XY
+DOMAIN-SUFFIX,scdn.co,PR0XY
+DOMAIN-SUFFIX,spoti.fi,PR0XY
 
 # > viuTV
-USER-AGENT,ViuTV*,Pr0xy
-DOMAIN-SUFFIX,cloudfront.net,Pr0xy
-DOMAIN-SUFFIX,viu.com,Pr0xy
-DOMAIN-SUFFIX,viu.tv,Pr0xy
-DOMAIN-SUFFIX,viu.now.com,Pr0xy
+USER-AGENT,ViuTV*,PR0XY
+DOMAIN-SUFFIX,cloudfront.net,PR0XY
+DOMAIN-SUFFIX,viu.com,PR0XY
+DOMAIN-SUFFIX,viu.tv,PR0XY
+DOMAIN-SUFFIX,viu.now.com,PR0XY
 
 # > Youtube
-USER-AGENT,*youtube*,Pr0xy
-USER-AGENT,YouTube*,Pr0xy
-DOMAIN-KEYWORD,youtube,Pr0xy
-DOMAIN-SUFFIX,googlevideo.com,Pr0xy
-DOMAIN-SUFFIX,gvt2.com,Pr0xy
-DOMAIN-SUFFIX,youtu.be,Pr0xy
+USER-AGENT,*youtube*,PR0XY
+USER-AGENT,YouTube*,PR0XY
+DOMAIN-KEYWORD,youtube,PR0XY
+DOMAIN-SUFFIX,googlevideo.com,PR0XY
+DOMAIN-SUFFIX,gvt2.com,PR0XY
+DOMAIN-SUFFIX,youtu.be,PR0XY
