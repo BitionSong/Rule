@@ -5,7 +5,7 @@ DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypalobjects.com
 
 # > Tophub
-host-keyword,popin.cc
+DOMAIN-KEYWOR,popin.cc
 DOMAIN-SUFFIX,tophub.today
 
 # > Beplay
