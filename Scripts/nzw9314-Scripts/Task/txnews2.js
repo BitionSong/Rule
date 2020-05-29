@@ -20,7 +20,17 @@ Surge 4.0
 腾讯新闻 = type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js
 腾讯新闻 = type=http-request,pattern=^https:\/\/api\.inews\.qq\.com\/activity\/v1\/redpack\/user\/list\?activity_id,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js
 
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+Loon 2.1.0+
+[Script]
+# 本地脚本
+cron "04 00 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js, enabled=true, tag=腾讯新闻
+
+http-request https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js
+
+http-request ^https:\/\/api\.inews\.qq\.com\/activity\/v1\/redpack\/user\/list\?activity_id script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js
+
+-----------------
 #  QX 1.0.7+
  [task_local]
 0 9 * * * txnews2.js, tag=腾讯新闻
@@ -29,6 +39,7 @@ https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? url script-reque
 # 获取红包ID
 ^https:\/\/api\.inews\.qq\.com\/activity\/v1\/redpack\/user\/list\?activity_id url script-request-header txnews2.js
 
+~~~~~~~~~~~~~~~~~~
  [MITM]
 hostname = api.inews.qq.com
 
@@ -38,7 +49,7 @@ Cookie获取后，请注释掉Cookie地址。
 #腾讯新闻app签到，根据红鲤鱼与绿鲤鱼与驴修改
 
 */
-const notify = false; //开启全部通知为true，关闭继续阅读为false
+const notify = 0; //开启全部通知为1，关闭继续阅读为1
 const cookieName = '腾讯新闻'
 const signurlKey = 'sy_signurl_txnews2'
 const cookieKey = 'sy_cookie_txnews2'
@@ -219,10 +230,56 @@ function getTotal() {
           Redpack()
           sy.log(cookieName+","+notb+ "\n" )
         }
+      titlebar()
       resolve()
       })
    })
  }
+
+//看新闻，领红包
+function titlebar() {
+ return new Promise((resolve, reject) => {
+  const barUrl = {
+    url: `https://news.qq.com/signin/v3/challredpackage.htm?disabletitlebar=1&activity_id=${RedID}`,
+    headers: {Cookie: cookieVal}};
+    sy.get(barUrl, function(error,response, data) {
+    if (error) {
+        sy.msg("看新闻，领红包‼️", "", error);
+     if (log) console.log("看新闻" + data)
+    } else {
+        //console.log("看新闻" + data)
+       activity()
+        }
+      resolve()
+      })
+   })
+ }
+
+
+//看新闻，领红包
+function activity() {
+ return new Promise((resolve, reject) => {
+ const ID =  signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
+  const activityUrl = {
+    url: `https://api.inews.qq.com/activity/v1/user/activity/get?isJailbreak=0&appver=13.5_qqnews_6.1.31&${ID}`,
+    headers: {Cookie: cookieVal},
+     body: `a=1`
+   };
+   sy.post(activityUrl, function(error,response, data) {
+    if (error) {
+        sy.msg("看新闻，领红包‼️", "", error);
+     if (log) console.log("看新闻" + data)
+    } else {
+        console.log("看新闻" + data)
+         const obj = JSON.parse(data)
+          sy.log(cookieName+","+notb+ "\n" )
+        }
+      resolve()
+      })
+   })
+ }
+
+
 
 function init() {
     isSurge = () => {

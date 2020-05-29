@@ -23,15 +23,6 @@ const bind = true // 绑定作者邀请码,默认true,可更改为false
 const cookieName = '米读'
 const senku = init()
 
-function initial() {
-    signinfo = {
-        addnumList: [],
-        rollList: [],
-        doubleList: []
-    }
-}
-
-
 if (DeleteCookie) {
     const one = senku.getdata('tokenMidu_read')
     const two = senku.getdata('tokenMidu_sign')
@@ -71,96 +62,88 @@ if (DeleteCookie) {
             senku.setdata("", 'senku_readTimeheader_midu2')
             senku.setdata("", "tokenMidu_read2")
             senku.setdata("", "tokenMidu_sign2")
-            senku.msg("米读 Cookie清除成功 !", "清除账户一选项", '请手动关闭脚本内"DeleteCookie"选项')
+            senku.msg("米读 Cookie清除成功 !", "清除账户二选项", '请手动关闭脚本内"DeleteCookie"选项')
         } else {
-            senku.msg("米读 无可清除的Cookie !", "清除账户一选项", '请手动关闭脚本内"DeleteCookie"选项')
+            senku.msg("米读 无可清除的Cookie !", "清除账户二选项", '请手动关闭脚本内"DeleteCookie"选项')
         }
     } else {
         senku.msg("米读 清除Cookie !", "未选取任何选项", '请手动关闭脚本内"DeleteCookie"选项')
     }
 }
 
-bind ? '' : senku.setdata('', 'bind');;
+function initial() {
+    signinfo = {
+        addnumList: [],
+        rollList: [],
+        doubleList: []
+    }
+}
+
+bind ? '' : senku.setdata('', 'bind')
+
+
+;
 (sign = () => {
     senku.log(`🔔 ${cookieName}`)
     senku.getdata('tokenMidu_sign') ? '' : senku.msg('米读签到', '', '不存在Cookie')
     DualAccount = true
     if (senku.getdata('tokenMidu_sign')) {
+        tokenVal = senku.getdata('tokenMidu_read')
         readTimeheaderVal = senku.getdata('senku_readTimeheader_midu')
         readTimebodyVal = senku.getdata('senku_readTimebody_midu')
         signbodyVal = senku.getdata('senku_signbody_midu')
         all()
     }
-
-    senku.done()
-})().catch((e) => senku.log(`❌ ${cookieName} 签到失败: ${e}`), senku.done())
+})()
 
 async function all() {
-    senku.log(`🍎${signbodyVal}`)
-    const headerVal = readTimeheaderVal
-    const urlVal = readTimebodyVal
-    const key = signbodyVal
-    initial()
-    await userInfo(key)
-    await signDay(key)
-    await signVideo(key)
-    await dice_index(key)
-    if (signinfo.dice_index && signinfo.dice_index.code == 0) {
-        const remain_add_num = signinfo.dice_index.data.remain_add_chance_num
-
-        for (let index = 0; index < remain_add_num; index++) {
-            await dice_addnum(key)
-        }
+    try {
+        senku.log(`🍎${signbodyVal}`)
+        const headerVal = readTimeheaderVal
+        const urlVal = readTimebodyVal
+        const key = signbodyVal
+        const token = tokenVal
+        initial()
+        await userInfo(key)
+        await signDay(key)
+        await signVideo(key)
         await dice_index(key)
-        const chance_num = signinfo.dice_index.data.chance_num
-        for (let index = 0; index < chance_num; index++) {
-            await dice_roll(key)
-            await dice_double(key)
+        if (signinfo.dice_index && signinfo.dice_index.code == 0) {
+            const remain_add_num = signinfo.dice_index.data.remain_add_chance_num
+
+            for (let index = 0; index < remain_add_num; index++) {
+                await dice_addnum(key)
+            }
+            await dice_index(key)
+            const chance_num = signinfo.dice_index.data.chance_num
+            for (let index = 0; index < chance_num; index++) {
+                await dice_roll(key)
+                await dice_double(key)
+            }
         }
-    }
 
-
-    if (senku.getdata('bind')) {
-        await Bind()
+        if (senku.getdata('bind')) {
+            await Bind()
+        }
+        await showmsg()
+        senku.done()
+    } catch (e) {
+        senku.msg(cookieName, `失败`, `说明: ${e}`)
+        senku.log(`❌ ${cookieName}  - 失败: ${e}`)
+        senku.done()
     }
-    await showmsg()
 }
 
 function double() {
     initial()
     DualAccount = false
     if (senku.getdata('tokenMidu_sign2')) {
+        tokenVal = senku.getdata('tokenMidu_read2')
         readTimeheaderVal = senku.getdata('senku_readTimeheader_midu2')
         readTimebodyVal = senku.getdata('senku_readTimebody_midu2')
         signbodyVal = senku.getdata('senku_signbody_midu2')
         all()
     }
-}
-
-// TODO:每日阅读分红金币
-function dividend(bodyVal) {
-    return new Promise((resolve, reject) => {
-        const dividend_urlVal = 'https://apiwz.midukanshu.com/wz/dice/index?' + bodyVal
-        const url = {
-            url: dividend_urlVal,
-            headers: {}
-        }
-        url.headers['Host'] = 'apiwz.midukanshu.com'
-        url.headers['Content-Type'] = 'application/x-www-form-urlencoded'
-        url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
-        senku.post(url, (error, response, data) => {
-            try {
-                senku.log(`❕ ${cookieName} dividend - response: ${JSON.stringify(response)}`)
-                signinfo.dividend = JSON.parse(data)
-                resolve()
-            } catch (e) {
-                senku.msg(cookieName, `骰子信息: 失败`, `说明: ${e}`)
-                senku.log(`❌ ${cookieName} dividend - 骰子信息失败: ${e}`)
-                senku.log(`❌ ${cookieName} dividend - response: ${JSON.stringify(response)}`)
-                resolve()
-            }
-        })
-    })
 }
 
 // 绑定
@@ -195,12 +178,12 @@ function userInfo(bodyVal) {
         url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
         senku.post(url, (error, response, data) => {
             try {
-                senku.log(`❕ ${cookieName} userInfo - response: ${JSON.stringify(response)}`)
+                senku.log(`🐍🐢 ${cookieName} userInfo - response: ${JSON.stringify(response)}`)
                 signinfo.userInfo = JSON.parse(data)
                 resolve()
             } catch (e) {
-                senku.msg(cookieName, `抽奖: 失败`, `说明: ${e}`)
-                senku.log(`❌ ${cookieName} userInfo - 抽奖失败: ${e}`)
+                senku.msg(cookieName, `获取用户信息: 失败`, `说明: ${e}`)
+                senku.log(`❌ ${cookieName} userInfo - 获取用户信息失败: ${e}`)
                 senku.log(`❌ ${cookieName} userInfo - response: ${JSON.stringify(response)}`)
                 resolve()
             }
@@ -222,7 +205,7 @@ function dice_index(bodyVal) {
         url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
         senku.post(url, (error, response, data) => {
             try {
-                senku.log(`❕ ${cookieName} dice_index - response: ${JSON.stringify(response)}`)
+                senku.log(`🐍🐢 ${cookieName} dice_index - response: ${JSON.stringify(response)}`)
                 signinfo.dice_index = JSON.parse(data)
                 resolve()
             } catch (e) {
@@ -248,7 +231,7 @@ function dice_roll(bodyVal) {
         url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
         senku.post(url, (error, response, data) => {
             try {
-                senku.log(`❕ ${cookieName} dice_roll - response: ${JSON.stringify(response)}`)
+                senku.log(`🐍🐢 ${cookieName} dice_roll - response: ${JSON.stringify(response)}`)
                 if (JSON.parse(data).code == 0) {
                     signinfo.rollList.push(JSON.parse(data))
                 }
@@ -276,7 +259,7 @@ function dice_double(bodyVal) {
         url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
         senku.post(url, (error, response, data) => {
             try {
-                senku.log(`❕ ${cookieName} dice_double - response: ${JSON.stringify(response)}`)
+                senku.log(`🐍🐢 ${cookieName} dice_double - response: ${JSON.stringify(response)}`)
                 if (JSON.parse(data).code == 0) {
                     signinfo.doubleList.push(JSON.parse(data))
                 }
@@ -304,7 +287,7 @@ function dice_addnum(bodyVal) {
         url.headers['User-Agent'] = 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_4_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 miduapp qapp'
         senku.post(url, (error, response, data) => {
             try {
-                senku.log(`❕ ${cookieName} dice_addnum - response: ${JSON.stringify(response)}`)
+                senku.log(`🐍🐢 ${cookieName} dice_addnum - response: ${JSON.stringify(response)}`)
                 if (JSON.parse(data).code == 0) {
                     signinfo.addnumList.push(JSON.parse(data))
                 }
@@ -332,7 +315,7 @@ function signDay(bodyVal) {
         url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
         senku.post(url, (error, response, data) => {
             try {
-                senku.log(`❕ ${cookieName} signDay - response: ${JSON.stringify(response)}`)
+                senku.log(`🐍🐢 ${cookieName} signDay - response: ${JSON.stringify(response)}`)
                 signinfo.signDay = JSON.parse(data)
                 resolve()
             } catch (e) {
@@ -358,7 +341,7 @@ function signVideo(bodyVal) {
         url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
         senku.post(url, (error, response, data) => {
             try {
-                senku.log(`❕ ${cookieName} signVideo - response: ${JSON.stringify(response)}`)
+                senku.log(`🐍🐢 ${cookieName} signVideo - response: ${JSON.stringify(response)}`)
                 signinfo.signVideo = JSON.parse(data)
                 resolve()
             } catch (e) {
@@ -409,10 +392,11 @@ function showmsg() {
         }
         senku.msg(cookieName + ` 用户:${name}`, subTitle, detail)
         if (DualAccount) double()
-        senku.done()
         resolve()
     })
 }
+
+
 
 function init() {
     isSurge = () => {
