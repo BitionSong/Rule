@@ -30,7 +30,7 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 *.video.qq.com
 
 [rewrite_local]
-^https:\/\/access.video.qq.com\/user\/auth_refresh url script-request-header .cookie.js
+^https:\/\/access.video.qq.com\/user\/auth_refresh url script-request-header videoqq.cookie.js
 
 [task_local]
 1 0 * * * videoqq.js
