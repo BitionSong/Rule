@@ -1,0 +1,64 @@
+{
+  "releases": [
+    {
+      "version": "0.7.10",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "新增",
+          "descs": ["订阅中的更多按钮可以链接到作者仓库"]
+        }
+      ]
+    },
+    {
+      "version": "0.7.9",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "新增",
+          "descs": ["可以修改会话", "增加帮忙手册入口", "推荐订阅入口"]
+        },
+        {
+          "name": "调整",
+          "descs": ["调整加载动态效果"]
+        }
+      ]
+    },
+    {
+      "version": "0.7.8",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "修复",
+          "descs": ["boolean 控件偶尔触发键盘问题"]
+        }
+      ]
+    },
+    {
+      "version": "0.7.7",
+      "tags": ["beta"],
+      "author": "@chavyleung",
+      "icon": "https://avatars3.githubusercontent.com/u/29748519",
+      "repo": "https://github.com/chavyleung",
+      "notes": [
+        {
+          "name": "优化",
+          "descs": ["全程无刷新", "独立分离页面", "优化数据结构减少内存占用"]
+        },
+        {
+          "name": "操作",
+          "descs": ["可以修复全局备份的名字", "点击'应用'回到顶部，再次单击折叠面板", "点击'订阅'回到顶部，再次单击刷新订阅", "点击具体订阅可刷新"]
+        }
+      ]
+    }
+  ]
+}

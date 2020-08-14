@@ -1,10 +1,40 @@
 function Env(name, opts) {
+  class Http {
+    constructor(env) {
+      this.env = env
+    }
+
+    send(opts, method = 'GET') {
+      opts = typeof opts === 'string' ? { url: opts } : opts
+      let sender = this.get
+      if (method === 'POST') {
+        sender = this.post
+      }
+      return new Promise((resolve, reject) => {
+        sender.call(this, opts, (err, resp, body) => {
+          if (err) reject(err)
+          else resolve(resp)
+        })
+      })
+    }
+
+    get(opts) {
+      return this.send.call(this.env, opts)
+    }
+
+    post(opts) {
+      return this.send.call(this.env, opts, 'POST')
+    }
+  }
+
   return new (class {
     constructor(name, opts) {
       this.name = name
+      this.http = new Http(this)
       this.data = null
       this.dataFile = 'box.dat'
       this.logs = []
+      this.isMute = false
       this.logSeparator = '\n'
       this.startTime = new Date().getTime()
       Object.assign(this, opts)
@@ -27,9 +57,44 @@ function Env(name, opts) {
       return 'undefined' !== typeof $loon
     }
 
+    toObj(str, defaultValue = null) {
+      try {
+        return JSON.parse(str)
+      } catch {
+        return defaultValue
+      }
+    }
+
+    toStr(obj, defaultValue = null) {
+      try {
+        return JSON.stringify(obj)
+      } catch {
+        return defaultValue
+      }
+    }
+
+    getjson(key, defaultValue) {
+      let json = defaultValue
+      const val = this.getdata(key)
+      if (val) {
+        try {
+          json = JSON.parse(this.getdata(key))
+        } catch {}
+      }
+      return json
+    }
+
+    setjson(val, key) {
+      try {
+        return this.setdata(JSON.stringify(val), key)
+      } catch {
+        return false
+      }
+    }
+
     getScript(url) {
       return new Promise((resolve) => {
-        $.get({ url }, (err, resp, body) => resolve(body))
+        this.get({ url }, (err, resp, body) => resolve(body))
       })
     }
 
@@ -46,9 +111,10 @@ function Env(name, opts) {
           body: { script_text: script, mock_type: 'cron', timeout: httpapi_timeout },
           headers: { 'X-Key': key, 'Accept': '*/*' }
         }
-        $.post(opts, (err, resp, body) => resolve(body))
+        this.post(opts, (err, resp, body) => resolve(body))
       }).catch((e) => this.logErr(e))
     }
+
     loaddata() {
       if (this.isNode()) {
         this.fs = this.fs ? this.fs : require('fs')
@@ -102,7 +168,11 @@ function Env(name, opts) {
     lodash_set(obj, path, value) {
       if (Object(obj) !== obj) return obj
       if (!Array.isArray(path)) path = path.toString().match(/[^.[\]]+/g) || []
-      path.slice(0, -1).reduce((a, c, i) => (Object(a[c]) === a[c] ? a[c] : (a[c] = Math.abs(path[i + 1]) >> 0 === +path[i + 1] ? [] : {})), obj)[path[path.length - 1]] = value
+      path
+        .slice(0, -1)
+        .reduce((a, c, i) => (Object(a[c]) === a[c] ? a[c] : (a[c] = Math.abs(path[i + 1]) >> 0 === +path[i + 1] ? [] : {})), obj)[
+        path[path.length - 1]
+      ] = value
       return obj
     }
 
@@ -140,7 +210,7 @@ function Env(name, opts) {
           issuc = this.setval(JSON.stringify(objedval), objkey)
         }
       } else {
-        issuc = $.setval(val, key)
+        issuc = this.setval(val, key)
       }
       return issuc
     }
@@ -234,7 +304,7 @@ function Env(name, opts) {
       if (opts.body && opts.headers && !opts.headers['Content-Type']) {
         opts.headers['Content-Type'] = 'application/x-www-form-urlencoded'
       }
-      delete opts.headers['Content-Length']
+      if (opts.headers) delete opts.headers['Content-Length']
       if (this.isSurge() || this.isLoon()) {
         $httpClient.post(opts, (err, resp, body) => {
           if (!err && resp) {
@@ -284,7 +354,9 @@ function Env(name, opts) {
         'S': new Date().getMilliseconds()
       }
       if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (new Date().getFullYear() + '').substr(4 - RegExp.$1.length))
-      for (let k in o) if (new RegExp('(' + k + ')').test(fmt)) fmt = fmt.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length))
+      for (let k in o)
+        if (new RegExp('(' + k + ')').test(fmt))
+          fmt = fmt.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length))
       return fmt
     }
 
@@ -319,33 +391,34 @@ function Env(name, opts) {
           return undefined
         }
       }
-      if (!$.isMute) {
+      if (!this.isMute) {
         if (this.isSurge() || this.isLoon()) {
           $notification.post(title, subt, desc, toEnvOpts(opts))
         } else if (this.isQuanX()) {
           $notify(title, subt, desc, toEnvOpts(opts))
         }
       }
-      this.logs.push('', '==============📣系统通知📣==============')
-      this.logs.push(title)
-      subt ? this.logs.push(subt) : ''
-      desc ? this.logs.push(desc) : ''
+      let logs = ['', '==============📣系统通知📣==============']
+      logs.push(title)
+      subt ? logs.push(subt) : ''
+      desc ? logs.push(desc) : ''
+      console.log(logs.join('\n'))
+      this.logs = this.logs.concat(logs)
     }
 
     log(...logs) {
       if (logs.length > 0) {
         this.logs = [...this.logs, ...logs]
-      } else {
-        console.log(this.logs.join(this.logSeparator))
       }
+      console.log(logs.join(this.logSeparator))
     }
 
     logErr(err, msg) {
       const isPrintSack = !this.isSurge() && !this.isQuanX() && !this.isLoon()
       if (!isPrintSack) {
-        $.log('', `❗️${this.name}, 错误!`, err)
+        this.log('', `❗️${this.name}, 错误!`, err)
       } else {
-        $.log('', `❗️${this.name}, 错误!`, err.stack)
+        this.log('', `❗️${this.name}, 错误!`, err.stack)
       }
     }
 
