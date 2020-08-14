@@ -3,6 +3,7 @@ USER-AGENT,PayPal*
 DOMAIN-KEYWORD,paypal
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypalobjects.com
+DOMAIN-SUFFIX,paypalobjects.com
 
 # > Tophub
 DOMAIN-SUFFIX,tophub.today
