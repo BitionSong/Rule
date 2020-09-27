@@ -51,6 +51,9 @@
         "key": "JDBean",
         "label": "京东京豆"
       }, {
+        "key": "JDWebcasts",
+        "label": "京东直播"
+      }, {
         "key": "JRBean",
         "label": "金融金贴"
       }, {
@@ -95,6 +98,15 @@
       }, {
         "key": "JDBook",
         "label": "京东图书"
+      }, {
+        "key": "JDShoes",
+        "label": "京东鞋靴"
+      },{
+        "key": "JDEsports",
+        "label": "京东电竞"
+      }, {
+        "key": "JDCalendar",
+        "label": "京东日历"
       }, {
         "key": "JDShand",
         "label": "京东二手 (如VPN重启,建议禁用)"
