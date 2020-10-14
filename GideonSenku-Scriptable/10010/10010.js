@@ -10,9 +10,14 @@ const $ = importModule("Env");
 
 const prefix = "boxjs.net"; //修改成你用的域名
 
+const title = '联通5G'
+const preview = 'small' // 预览大小 可选:small,medium,large
+const spacing = 5 // 间隙大小
 // option1 manual
-const tel = `填入你的电话号码`;
-const VAL_loginheader = `填入来自BoxJs的数据`;
+
+const tel = `` // 填入你的电话号码
+
+const VAL_loginheader = `` // 填入来自BoxJs的数据
 
 // option2 auto getdata from BoxJS
 $.KEY_signheader = "chavy_signheader_10010";
@@ -21,18 +26,24 @@ $.KEY_loginheader = "chavy_tokenheader_10010";
 $.Val_signheader = await getdata($.KEY_signheader);
 $.Val_loginheader = await getdata($.KEY_loginheader);
 
-const res = await getinfo();
-if (config.runsInWidget) {
-  let widget = createWidget(res);
-  Script.setWidget(widget);
-  Script.complete();
+const res = await getinfo()
+await render()
+
+async function render() {
+  // create and show widget
+  if (config.runsInWidget) {
+    let widget = await createWidget(res)
+    Script.setWidget(widget)
+    Script.complete()
+  } else {
+    await createWidget(res)
+  }
 }
 
-function createWidget(res) {
+async function createWidget(res) {
   const signinfo = res;
   if (signinfo.code == "Y") {
     // 基本信息
-
     const traffic = signinfo.data.dataList[0];
     const flow = signinfo.data.dataList[1];
     const voice = signinfo.data.dataList[2];
@@ -40,59 +51,29 @@ function createWidget(res) {
     const back = signinfo.data.dataList[4];
     const money = signinfo.data.dataList[5];
 
-    const w = new ListWidget();
-    const bgColor = new LinearGradient();
-    bgColor.colors = [new Color("#1c1c1c"), new Color("#29323c")];
-    bgColor.locations = [0.0, 1.0];
-    w.backgroundGradient = bgColor;
-    w.addSpacer();
-    w.spacing = 5;
 
-    const firstLine = w.addText(`[📱]中国联通`);
-    firstLine.textSize = 12;
-    firstLine.textColor = Color.white();
-    firstLine.textOpacity = 0.7;
+    $.traffic = `[${traffic.remainTitle}]${traffic.number}${traffic.unit}`
+    $.flow = `[${flow.remainTitle}]${flow.number}${flow.unit}`
+    $.voice = `[${voice.remainTitle}]${voice.number}${voice.unit}`
+    $.credit = `[${credit.remainTitle}]${credit.number}${credit.unit}`
+    $.back = `[${back.remainTitle}]${back.number}${back.unit}`
+    const opts = {
+      title,
+      texts: {
+        traffic: $.traffic,
+        flow: $.flow,
+        voice: $.voice,
+        credit: $.credit,
+        back: $.back,
+        updateTime: 'true',
+        battery: 'true'
+      },
+      preview,
+      spacing
+    }
+    let widget = await $.createWidget(opts);
+    return widget
 
-    const trafficLine = w.addText(
-      `[${traffic.remainTitle}]${traffic.number}${traffic.unit}`
-    );
-    trafficLine.textSize = 12;
-    trafficLine.textColor = Color.white();
-
-    const flowLine = w.addText(
-      `[${flow.remainTitle}]${flow.number}${flow.unit}`
-    );
-    flowLine.textSize = 12;
-    flowLine.textColor = new Color("#6ef2ae");
-
-    const voiceLine = w.addText(
-      `[${voice.remainTitle}]${voice.number}${voice.unit}`
-    );
-    voiceLine.textSize = 12;
-    voiceLine.textColor = new Color("#7dbbae");
-
-    const creditLine = w.addText(
-      `[${credit.remainTitle}]${credit.number}${credit.unit}`
-    );
-    creditLine.textSize = 12;
-    creditLine.textColor = new Color("#ff9468");
-
-    const backLine = w.addText(
-      `[${back.remainTitle}]${back.number}${back.unit}`
-    );
-    backLine.textSize = 12;
-    backLine.textColor = new Color("#ffcc66");
-
-    const moneyLine = w.addText(
-      `[${money.remainTitle}]${money.number}${money.unit}`
-    );
-    moneyLine.textSize = 12;
-    moneyLine.textColor = new Color("#ffa7d3");
-
-    w.addSpacer();
-    w.spacing = 5;
-    w.presentSmall();
-    return w;
   }
 }
 
