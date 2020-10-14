@@ -58,9 +58,6 @@
         "label": "金融金贴"
       }, {
         "key": "JRDoll",
-<<<<<<< HEAD
-        "label": "金融娃娃"
-=======
         "label": "金融签壹"
       }, {
         "key": "JRTwoDoll",
@@ -68,7 +65,6 @@
       }, {
         "key": "JRThreeDoll",
         "label": "金融签叁"
->>>>>>> master
       }, {
         "key": "JRSteel",
         "label": "金融钢镚"
@@ -79,12 +75,9 @@
         "key": "JDGStore",
         "label": "京东超市"
       }, {
-<<<<<<< HEAD
-=======
         "key": "TakeaLook",
         "label": "京东看看"
       }, {
->>>>>>> master
         "key": "JD3C",
         "label": "京东数码"
       }, {
@@ -100,13 +93,8 @@
         "key": "JDSubsidy",
         "label": "京东晚市"
       }, {
-<<<<<<< HEAD
-        "key": "JDWomen",
-        "label": "京东女装"
-=======
         "key": "JDFineWine",
         "label": "京东酒饮"
->>>>>>> master
       }, {
         "key": "JDCash",
         "label": "京东红包"
@@ -120,33 +108,24 @@
         "key": "JDBook",
         "label": "京东图书"
       }, {
-<<<<<<< HEAD
-        "key": "JDShoes",
-        "label": "京东鞋靴"
-      },{
-=======
         "key": "JDSchool",
         "label": "京东校园"
       }, {
         "key": "JDShoes",
         "label": "京东鞋靴"
       }, {
->>>>>>> master
         "key": "JDEsports",
         "label": "京东电竞"
       }, {
         "key": "JDCalendar",
         "label": "京东日历"
       }, {
-<<<<<<< HEAD
-=======
         "key": "JDWomen",
         "label": "京东女装"
       }, {
         "key": "JDSecKill",
         "label": "京东秒杀"
       }, {
->>>>>>> master
         "key": "JDShand",
         "label": "京东二手 (如VPN重启,建议禁用)"
       }, {
@@ -200,15 +179,12 @@
       }, {
         "key": "TSteel",
         "label": "总钢镚查询"
-<<<<<<< HEAD
-=======
       }, {
         "key": "TotalSubsidy",
         "label": "总金贴查询"
       }, {
         "key": "TotalMoney",
         "label": "总现金查询"
->>>>>>> master
       }]
     }, {
       "id": "JD_DailyBonusTimeOut",
@@ -270,11 +246,7 @@
     "script": "https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js",
     "author": "@NobyDa",
     "repo": "https://github.com/NobyDa/Script/blob/master/Bilibili-DailyBonus/Manga.js",
-<<<<<<< HEAD
-    "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/bilibili.png", "https://raw.githubusercontent.com/Orz-3/task/master/bilibili.png"]
-=======
     "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/manga.png", "https://raw.githubusercontent.com/Orz-3/task/master/manga.png"]
->>>>>>> master
   }, {
     "id": "BaiduTB",
     "name": "百度贴吧",
@@ -338,9 +310,6 @@
     "script": "https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js",
     "author": "@NobyDa",
     "repo": "https://github.com/NobyDa/Script/blob/master/KuaiKan-DailyBonus/KKMH.js",
-<<<<<<< HEAD
-    "icons": ["https://ftp.bmp.ovh/imgs/2020/09/5eb8495e3582aca9.png", "https://ftp.bmp.ovh/imgs/2020/09/a3345da5e9094363.png"]
-=======
     "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/KuaiKan.png", "https://raw.githubusercontent.com/Orz-3/task/master/KuaiKan.png"]
   }, {
     "id": "BiliRegion",
@@ -387,6 +356,5 @@
     "author": "@NobyDa",
     "repo": "https://github.com/NobyDa/Script/blob/master/Surge/JS/Bili_Auto_Regions.js",
     "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/bilibili.png", "https://raw.githubusercontent.com/Orz-3/task/master/bilibili.png"]
->>>>>>> master
   }]
 }

@@ -1,13 +1,5 @@
 # Chavy Scripts
-<<<<<<< HEAD
-<<<<<<< HEAD
-![](https://img.shields.io/badge/license-MIT-blueviolet.svg)
-=======
 ![](https://img.shields.io/badge/license-GPL-blueviolet.svg)
->>>>>>> master
-=======
-![](https://img.shields.io/badge/license-GPL-blueviolet.svg)
->>>>>>> master
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/chavyleung/scripts?color=%23c694ff)
 ![](https://badgen.net/github/stars/chavyleung/scripts)
 ![](https://tokei.rs/b1/github/chavyleung/scripts?category=code)
