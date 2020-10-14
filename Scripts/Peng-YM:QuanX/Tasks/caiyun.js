@@ -116,7 +116,7 @@ if (typeof $request !== "undefined") {
             "open-url": "https://t.me/cool_scripts",
           }
         );
-      else $.notify("[彩云天气]", "❌ 出现错误", JSON.stringify(err));
+      else $.notify("[彩云天气]", "❌ 出现错误", JSON.stringify(err, Object.getOwnPropertyNames(err)));
     })
     .finally($.done());
 }
@@ -466,6 +466,7 @@ function mapSkycon(skycon) {
       "⛄️暴雪",
       "https://raw.githubusercontent.com/58xinian/icon/master/Weather/HEAVY_SNOW",
     ],
+    FOG: ["🌫️ 雾"],
     DUST: ["💨 浮尘"],
     SAND: ["💨 沙尘"],
     WIND: ["🌪 大风"],

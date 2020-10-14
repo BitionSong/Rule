@@ -1,7 +1,11 @@
 const $ = new Env('万达电影')
 $._mi_ = 'senku_wanda_mi_'
 $.desc = []
+<<<<<<< HEAD
 $.signCode = '73789488'
+=======
+$.signCode = '95791112'
+>>>>>>> master
 $.questionCode = '15884027'
 const date = tTime(new Date().getTime())
 
