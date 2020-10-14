@@ -1,6 +1,10 @@
 # Chavy Scripts
 <<<<<<< HEAD
+<<<<<<< HEAD
 ![](https://img.shields.io/badge/license-MIT-blueviolet.svg)
+=======
+![](https://img.shields.io/badge/license-GPL-blueviolet.svg)
+>>>>>>> master
 =======
 ![](https://img.shields.io/badge/license-GPL-blueviolet.svg)
 >>>>>>> master
