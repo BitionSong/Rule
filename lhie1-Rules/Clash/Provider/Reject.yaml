@@ -1307,6 +1307,7 @@ payload:
   - DOMAIN-SUFFIX,adstextview.qq.com
   - DOMAIN-SUFFIX,adstil.indiatimes.com
   - DOMAIN-SUFFIX,ad-stir.com
+  - DOMAIN-SUFFIX,adsmind.ugdtimg.com
   - DOMAIN-SUFFIX,adstream.123.sogoucdn.com
   - DOMAIN-SUFFIX,ads-twitter.com
   - DOMAIN-SUFFIX,ads-v-darwin.hulustream.com
@@ -2957,7 +2958,6 @@ payload:
   - DOMAIN-SUFFIX,downloadb.dewmobile.net
   - DOMAIN-SUFFIX,downmobile.kugou.com
   - DOMAIN-SUFFIX,dp.559.cc
-  - DOMAIN-SUFFIX,dp3.qq.com
   - DOMAIN-SUFFIX,dpm.demdex.net
   - DOMAIN-SUFFIX,dps.499.cn
   - DOMAIN-SUFFIX,dps.shouji56.com
