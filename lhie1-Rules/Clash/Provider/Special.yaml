@@ -20,6 +20,9 @@ payload:
   - DOMAIN-SUFFIX,ls.apple.com
   - DOMAIN-SUFFIX,mzstatic.com
 
+  # > Epic
+  - DOMAIN-KEYWORD,epicgames
+
   # > Google
   - DOMAIN-KEYWORD,mtalk.google.com
   - DOMAIN,safebrowsing.googleapis.com
@@ -45,19 +48,35 @@ payload:
   - PROCESS-NAME,UUBooster
 
   # > Windows
+  - DOMAIN-SUFFIX,msftconnecttest.com
   - DOMAIN-SUFFIX,windows.com
   - DOMAIN-SUFFIX,windows.net
   - DOMAIN-SUFFIX,windowsupdate.com
+  - DOMAIN-SUFFIX,xbox.com
+  - DOMAIN-SUFFIX,xboxlive.com
 
   # > Xunlei
   # - User-Agent,%E8%BF%85%E9%9B%B7
   - DOMAIN-SUFFIX,xunlei.com
 
   # > Download
+  - PROCESS-NAME,aria2c.exe
+  - PROCESS-NAME,BitComet.exe
+  - PROCESS-NAME,fdm.exe
+  # - PROCESS-NAME,IDMan.exe
+  - PROCESS-NAME,NetTransport.exe
+  - PROCESS-NAME,qbittorrent.exe
+  - PROCESS-NAME,Thunder.exe
+  - PROCESS-NAME,ThunderVIP.exe
+  - PROCESS-NAME,transmission-daemon.exe
+  - PROCESS-NAME,transmission-qt.exe
+  - PROCESS-NAME,uTorrent.exe
+  - PROCESS-NAME,WebTorrent.exe
   - PROCESS-NAME,aria2c
   - PROCESS-NAME,fdm
   - PROCESS-NAME,Folx
   - PROCESS-NAME,NetTransport
+  - PROCESS-NAME,qbittorrent
   - PROCESS-NAME,Thunder
   - PROCESS-NAME,Transmission
   - PROCESS-NAME,uTorrent
@@ -94,9 +113,3 @@ payload:
   - DOMAIN-SUFFIX,smtp
   # - URL-REGEX,(Subject|HELO|SMTP)
 
-  - DOMAIN-SUFFIX,local
-  - IP-CIDR,127.0.0.0/8
-  - IP-CIDR,172.16.0.0/12
-  - IP-CIDR,192.168.0.0/16
-  - IP-CIDR,10.0.0.0/8
-  - IP-CIDR,100.64.0.0/10
