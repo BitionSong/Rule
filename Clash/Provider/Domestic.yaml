@@ -19,8 +19,13 @@ payload:
   - DOMAIN-SUFFIX,p4pfile.com
   - DOMAIN-SUFFIX,zmzfile.com
 
-  # > Sony  PSX
+  # > Sony
   # - User-Agent,RemotePlay*
+  - DOMAIN-SUFFIX,playstation.com
+  - DOMAIN-SUFFIX,playstation.net
+  - DOMAIN-SUFFIX,playstationnetwork.com
+  - DOMAIN-SUFFIX,sony.com
+  - DOMAIN-SUFFIX,sonyentertainmentnetwork.com
 
   # > TeamViewer
   - IP-CIDR,185.188.32.0/24,no-resolve
@@ -90,7 +95,7 @@ payload:
   - DOMAIN-SUFFIX,cnbetacdn.com
   - DOMAIN-SUFFIX,chdbits.co
   - DOMAIN-SUFFIX,cnlang.org
-  - DOMAIN-SUFFIX,culturedcode.com
+  - DOMAIN-SUFFIX,cn88.net
   - DOMAIN-SUFFIX,dct-cloud.com
   - DOMAIN-SUFFIX,didialift.com
   - DOMAIN-SUFFIX,digicert.com
@@ -151,6 +156,7 @@ payload:
   - DOMAIN-SUFFIX,lemicp.com
   - DOMAIN-SUFFIX,letv.com
   - DOMAIN-SUFFIX,letvcloud.com
+  - DOMAIN-SUFFIX,liyuans.com
   - DOMAIN-SUFFIX,lizhi.io
   - DOMAIN-SUFFIX,localizecdn.com
   - DOMAIN-SUFFIX,lucifr.com
