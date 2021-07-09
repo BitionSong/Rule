@@ -1,6 +1,9 @@
 # > TestFlight
 DOMAIN,testflight.apple.com
 
+# > google.cn
+DOMAIN-SUFFIX,google.cn
+
 # > Line
 DOMAIN-SUFFIX,lin.ee
 DOMAIN-SUFFIX,line.me
