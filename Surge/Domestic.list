@@ -5,8 +5,6 @@ DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypalobjects.com
 DOMAIN-SUFFIX,paypalobjects.com
 
-# > Tophub
-DOMAIN-SUFFIX,tophub.today
 # > Beplay
 DOMAIN-KEYWORD,beplay
 
@@ -77,7 +75,6 @@ DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,aliyun.com
 DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,amap.com
-DOMAIN-SUFFIX,api.crisp.chat
 DOMAIN-SUFFIX,appshike.com
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,autonavi.com
@@ -122,7 +119,6 @@ DOMAIN-SUFFIX,dytt8.net
 DOMAIN-SUFFIX,easou.com
 DOMAIN-SUFFIX,ecitic.com
 DOMAIN-SUFFIX,ecitic.net
-DOMAIN-SUFFIX,eclipse.org
 DOMAIN-SUFFIX,eudic.net
 DOMAIN-SUFFIX,ewqcxz.com
 DOMAIN-SUFFIX,feng.com
