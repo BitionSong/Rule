@@ -3,7 +3,7 @@ DOMAIN,testflight.apple.com
 
 # > google.cn
 DOMAIN-SUFFIX,google.cn
-DOMAIN-SUFFIX,mt2.google.cn
+DOMAIN,mt2.google.cn
 
 # > Line
 DOMAIN-SUFFIX,lin.ee
