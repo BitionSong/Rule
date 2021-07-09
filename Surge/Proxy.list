@@ -2,6 +2,7 @@
 DOMAIN,testflight.apple.com
 
 # > google.cn
+DOMAIN-KEYWORD,google
 DOMAIN,mt2.google.cn
 DOMAIN-SUFFIX,google.cn
 
