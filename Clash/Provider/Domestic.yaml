@@ -11,7 +11,7 @@ payload:
   
   # >ip
   - DOMAIN-SUFFIX,v4.ident.me
-  - DOMAIN-SUFFIX,seeip.org
+  #- DOMAIN-SUFFIX,seeip.org
   - DOMAIN-SUFFIX,whatismyipaddress.com
 
   # > Prior
