@@ -25,7 +25,7 @@ payload:
   - DOMAIN-SUFFIX,zmzfile.com
 
   # > Sony
-  # - User-Agent,RemotePlay*
+  # - USER-AGENT,RemotePlay*
   - DOMAIN-SUFFIX,playstation.com
   - DOMAIN-SUFFIX,playstation.net
   - DOMAIN-SUFFIX,playstationnetwork.com
@@ -37,13 +37,21 @@ payload:
   - IP-CIDR,185.188.33.0/24,no-resolve
   - IP-CIDR,185.188.34.0/24,no-resolve
   - IP-CIDR,185.188.35.0/24,no-resolve
-  - IP-CIDR,2a0b:b580::/48,no-resolve
-  - IP-CIDR,2a0b:b581::/48,no-resolve
-  - IP-CIDR,2a0b:b582::/48,no-resolve
-  - IP-CIDR,2a0b:b583::/48,no-resolve
+  - IP-CIDR6,2a0b:b580::/48,no-resolve
+  - IP-CIDR6,2a0b:b581::/48,no-resolve
+  - IP-CIDR6,2a0b:b582::/48,no-resolve
+  - IP-CIDR6,2a0b:b583::/48,no-resolve
 
   # > Tencent
   - IP-CIDR,182.254.116.0/24,no-resolve
+
+  # > Tencent WeChat (International)
+  - IP-CIDR,101.32.104.0/21,DIRECT,no-resolve
+  - IP-CIDR,101.32.118.0/23,DIRECT,no-resolve
+  - IP-CIDR,101.32.96.0/20,DIRECT,no-resolve
+  - IP-CIDR,129.226.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,183.128.0.0/11,DIRECT,no-resolve
+  - IP-CIDR,183.131.48.0/20,DIRECT,no-resolve
 
   - DOMAIN-SUFFIX,12306.cn
   - DOMAIN-SUFFIX,12306.com
@@ -64,6 +72,7 @@ payload:
   - DOMAIN-SUFFIX,air-matters.io
   - DOMAIN-SUFFIX,aixifan.com
   - DOMAIN-SUFFIX,akadns.net
+  - DOMAIN-SUFFIX,alibaba.com
   - DOMAIN-SUFFIX,alibabacloud.com
   - DOMAIN-SUFFIX,alicdn.com
   - DOMAIN-SUFFIX,alipay.com
@@ -71,18 +80,15 @@ payload:
   - DOMAIN-SUFFIX,aliyun.com
   - DOMAIN-SUFFIX,aliyuncs.com
   - DOMAIN-SUFFIX,amap.com
-  - DOMAIN-SUFFIX,api.crisp.chat
   - DOMAIN-SUFFIX,appshike.com
   - DOMAIN-SUFFIX,appstore.com
   - DOMAIN-SUFFIX,autonavi.com
-  - DOMAIN-SUFFIX,aweme.snssdk.com
   - DOMAIN-SUFFIX,bababian.com
   - DOMAIN-SUFFIX,baidu.com
   - DOMAIN-SUFFIX,baidupcs.com
   - DOMAIN-SUFFIX,bdimg.com
   - DOMAIN-SUFFIX,bdstatic.com
   - DOMAIN-SUFFIX,beatsbydre.com
-  - DOMAIN-SUFFIX,bet365.com
   - DOMAIN-SUFFIX,broadcasthe.net
   - DOMAIN-SUFFIX,caiyunapp.com
   - DOMAIN-SUFFIX,ccgslb.com
@@ -116,7 +122,6 @@ payload:
   - DOMAIN-SUFFIX,easou.com
   - DOMAIN-SUFFIX,ecitic.com
   - DOMAIN-SUFFIX,ecitic.net
-  - DOMAIN-SUFFIX,eclipse.org
   - DOMAIN-SUFFIX,eudic.net
   - DOMAIN-SUFFIX,ewqcxz.com
   - DOMAIN-SUFFIX,feng.com
@@ -128,15 +133,18 @@ payload:
   - DOMAIN-SUFFIX,geetest.com
   - DOMAIN-SUFFIX,godic.net
   - DOMAIN-SUFFIX,goodread.com
+  - DOMAIN-SUFFIX,goofish.com
   - DOMAIN-SUFFIX,gtimg.com
   - DOMAIN-SUFFIX,haibian.com
   - DOMAIN-SUFFIX,hao123.com
   - DOMAIN-SUFFIX,haosou.com
   - DOMAIN-SUFFIX,hdchina.org
   - DOMAIN-SUFFIX,hdcmct.org
+  - DOMAIN-SUFFIX,hjfile.cn
   - DOMAIN-SUFFIX,hkserversolution.com
   - DOMAIN-SUFFIX,hollisterco.com
   - DOMAIN-SUFFIX,hongxiu.com
+  - DOMAIN-SUFFIX,hujiang.com
   - DOMAIN-SUFFIX,hxcdn.net
   - DOMAIN-SUFFIX,icedropper.com
   - DOMAIN-SUFFIX,iciba.com
@@ -192,7 +200,6 @@ payload:
   - DOMAIN-SUFFIX,pgyer.com
   - DOMAIN-SUFFIX,pniao.com
   - DOMAIN-SUFFIX,privatehd.to
-  - DOMAIN-SUFFIX,pstatp.com
   - DOMAIN-SUFFIX,qbox.me
   - DOMAIN-SUFFIX,qcloud.com
   - DOMAIN-SUFFIX,qdaily.com
@@ -218,7 +225,6 @@ payload:
   - DOMAIN-SUFFIX,sinaimg.com
   - DOMAIN-SUFFIX,sm.ms
   - DOMAIN-SUFFIX,smzdm.com
-  - DOMAIN-SUFFIX,snssdk.com
   - DOMAIN-SUFFIX,snwx.com
   - DOMAIN-SUFFIX,so.com
   - DOMAIN-SUFFIX,sogou.com
@@ -228,7 +234,6 @@ payload:
   - DOMAIN-SUFFIX,soso.com
   - DOMAIN-SUFFIX,sspai.com
   - DOMAIN-SUFFIX,startssl.com
-  - DOMAIN-SUFFIX,store.steampowered.com
   - DOMAIN-SUFFIX,suning.com
   - DOMAIN-SUFFIX,symcd.com
   - DOMAIN-SUFFIX,taobao.com
@@ -262,8 +267,10 @@ payload:
   - DOMAIN-SUFFIX,wkcdn.com
   - DOMAIN-SUFFIX,xdrig.com
   - DOMAIN-SUFFIX,xhostfire.com
+  - DOMAIN-SUFFIX,xhscdn.com
   - DOMAIN-SUFFIX,xiami.com
   - DOMAIN-SUFFIX,xiami.net
+  - DOMAIN-SUFFIX,xiaohongshu.com
   - DOMAIN-SUFFIX,xiaojukeji.com
   - DOMAIN-SUFFIX,xiaomi.com
   - DOMAIN-SUFFIX,xiaomi.net
