@@ -8,6 +8,11 @@ payload:
   - DOMAIN-SUFFIX,battle.net
   - DOMAIN-SUFFIX,battlenet.com
   - DOMAIN-SUFFIX,blizzard.com
+  
+  # >ip
+  - DOMAIN-SUFFIX,v4.ident.me
+  - DOMAIN-SUFFIX,seeip.org
+  - DOMAIN-SUFFIX,whatismyipaddress.com
 
   # > Prior
   - DOMAIN,client.amplifi.com
