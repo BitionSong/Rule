@@ -7,7 +7,10 @@ payload:
   - DOMAIN-SUFFIX,line-cdn.net
   - DOMAIN-SUFFIX,line-scdn.net
   - DOMAIN-SUFFIX,nhncorp.jp
-
+  
+  # > OPENAI
+  - DOMAIN-SUFFIX,openai.com
+  
   # > Riot Games
   - DOMAIN-SUFFIX,riotcdn.net
   - DOMAIN-SUFFIX,wr.pvp.net
