@@ -10,6 +10,9 @@ DOMAIN-SUFFIX,line-cdn.net,PR0XY
 DOMAIN-SUFFIX,line-scdn.net,PR0XY
 DOMAIN-SUFFIX,nhncorp.jp,PR0XY
 
+# > OPNEAI
+DOMAIN-SUFFIX,openai.com,PR0XY
+
 # > Sony
 DOMAIN-SUFFIX,playstation.com,PR0XY
 DOMAIN-SUFFIX,playstation.net,PR0XY
