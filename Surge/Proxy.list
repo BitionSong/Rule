@@ -6,6 +6,9 @@ DOMAIN-KEYWORD,google
 DOMAIN,mt2.google.cn
 DOMAIN-SUFFIX,google.cn
 
+# > OPENAI
+DOMAIN-SUFFIX,openai.com
+
 # > Line
 DOMAIN-SUFFIX,lin.ee
 DOMAIN-SUFFIX,line.me
