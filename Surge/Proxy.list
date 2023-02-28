@@ -1,6 +1,9 @@
 # > TestFlight
 DOMAIN,testflight.apple.com
 
+# > Openai
+DOMAIN,openai.com
+
 # > google.cn
 DOMAIN-KEYWORD,google
 DOMAIN,mt2.google.cn
