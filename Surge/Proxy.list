@@ -2,7 +2,7 @@
 DOMAIN,testflight.apple.com
 
 # > Openai
-DOMAIN,openai.com
+DOMAIN-SUFFIX,openai.com
 
 # > google.cn
 DOMAIN-KEYWORD,google
