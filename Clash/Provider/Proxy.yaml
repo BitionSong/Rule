@@ -1,4 +1,10 @@
-payload:  
+payload:
+  # > Duolingo
+  # - USER-AGENT,Duolingo*
+  - DOMAIN-KEYWORD,duolingo
+  - DOMAIN-SUFFIX,duolingo.cn
+  - DOMAIN-SUFFIX,duolingo.com
+  
   # > Line
   - DOMAIN-SUFFIX,lin.ee
   - DOMAIN-SUFFIX,line.me
@@ -7,10 +13,7 @@ payload:
   - DOMAIN-SUFFIX,line-cdn.net
   - DOMAIN-SUFFIX,line-scdn.net
   - DOMAIN-SUFFIX,nhncorp.jp
-  
-  # > OPENAI
-  - DOMAIN-SUFFIX,openai.com
-  
+
   # > Riot Games
   - DOMAIN-SUFFIX,riotcdn.net
   - DOMAIN-SUFFIX,wr.pvp.net
@@ -26,7 +29,7 @@ payload:
   - DOMAIN-KEYWORD,tesla
 
   # > Zooba
-  # - User-Agent,battleroyale*
+  # - USER-AGENT,battleroyale*
 
   # > Top blocked sites
   - DOMAIN-SUFFIX,2o7.net
@@ -70,7 +73,6 @@ payload:
   - DOMAIN-SUFFIX,apkpure.com
   - DOMAIN-SUFFIX,appdownloader.net
   - DOMAIN-SUFFIX,apple-dns.net
-  - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,appshopper.com
   - DOMAIN-SUFFIX,arcgis.com
   - DOMAIN-SUFFIX,archive.is
@@ -88,6 +90,7 @@ payload:
   - DOMAIN-SUFFIX,badoo.com
   - DOMAIN-SUFFIX,bandisoft.com
   - DOMAIN-SUFFIX,bbtoystore.com
+  - DOMAIN-SUFFIX,bet365.com
   - DOMAIN-SUFFIX,betvictor.com
   - DOMAIN-SUFFIX,bigsound.org
   - DOMAIN-SUFFIX,bing.com
@@ -141,6 +144,7 @@ payload:
   - DOMAIN-SUFFIX,cocoapods.org
   - DOMAIN-SUFFIX,comodoca.com
   - DOMAIN-SUFFIX,content.office.net
+  - DOMAIN-SUFFIX,crisp.chat
   - DOMAIN-SUFFIX,culturedcode.com
   - DOMAIN-SUFFIX,cygames.jp
   - DOMAIN-SUFFIX,d.pr
@@ -213,6 +217,7 @@ payload:
   - DOMAIN-SUFFIX,gfx.ms
   - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,ghostnoteapp.com
+  - DOMAIN-SUFFIX,ghcr.io
   - DOMAIN-SUFFIX,git.io
   - DOMAIN-SUFFIX,gitbook.com
   - DOMAIN-SUFFIX,globalsign.com
@@ -248,6 +253,7 @@ payload:
   - DOMAIN-SUFFIX,img.ly
   - DOMAIN-SUFFIX,imgur.com
   - DOMAIN-SUFFIX,imore.com
+  - DOMAIN-SUFFIX,imtoken.fans
   - DOMAIN-SUFFIX,ingress.com
   - DOMAIN-SUFFIX,inoreader.com
   - DOMAIN-SUFFIX,insder.co
@@ -278,7 +284,6 @@ payload:
   - DOMAIN-SUFFIX,klip.me
   - DOMAIN-SUFFIX,leancloud.com
   - DOMAIN-SUFFIX,leetcode.com
-  - DOMAIN-SUFFIX,lhie1.com
   - DOMAIN-SUFFIX,libsyn.com
   - DOMAIN-SUFFIX,licdn.com
   - DOMAIN-SUFFIX,lightboxcdn.com
@@ -306,6 +311,7 @@ payload:
   - DOMAIN-SUFFIX,megaupload.com
   - DOMAIN-SUFFIX,microsofttranslator.com
   - DOMAIN-SUFFIX,mindnode.com
+  - DOMAIN-SUFFIX,mixin.one
   - DOMAIN-SUFFIX,mlssoccer.com
   - DOMAIN-SUFFIX,mobile01.com
   - DOMAIN-SUFFIX,modmyi.com
@@ -314,6 +320,7 @@ payload:
   - DOMAIN-SUFFIX,msedge.net
   - DOMAIN-SUFFIX,mycnnews.com
   - DOMAIN-SUFFIX,myfontastic.com
+  - DOMAIN-SUFFIX,mypikpak.com
   - DOMAIN-SUFFIX,name.com
   - DOMAIN-SUFFIX,nasa.gov
   - DOMAIN-SUFFIX,ndr.de
@@ -335,6 +342,7 @@ payload:
   - DOMAIN-SUFFIX,nytimg.com
   - DOMAIN-SUFFIX,nytstyle.com
   - DOMAIN-SUFFIX,office365.com
+  - DOMAIN-SUFFIX,okx.com
   - DOMAIN-SUFFIX,omnigroup.com
   - DOMAIN-SUFFIX,onenote.com
   - DOMAIN-SUFFIX,ooyala.com
@@ -590,6 +598,7 @@ payload:
   - DOMAIN-SUFFIX,xda-developers.com
   - DOMAIN-SUFFIX,xeeno.com
   - DOMAIN-SUFFIX,xiti.com
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
   - DOMAIN-SUFFIX,xteko.com
   - DOMAIN-SUFFIX,xuite.net
   - DOMAIN-SUFFIX,xvideos.com
@@ -617,7 +626,7 @@ payload:
   - DOMAIN-SUFFIX,zynamics.com
 
   # > Force some domains which are fucked by GFW while resolving DNS,or do not respect the system Proxy
-  # - User-Agent,WhatsApp*
+  # - USER-AGENT,WhatsApp*
 
   - DOMAIN-KEYWORD,appledaily
   - DOMAIN-KEYWORD,beetalk
@@ -677,8 +686,16 @@ payload:
 
   # > V2EX
   - DOMAIN-SUFFIX,v2ex.com
-
+  
   - DOMAIN-KEYWORD,dlercloud
+
+  # > VikACG
+  - DOMAIN-SUFFIX,vikacg.com
+  - DOMAIN-SUFFIX,picjs.xyz
+
+  # > exception
+  - DOMAIN-SUFFIX,wheel-size.cn
+  - DOMAIN-SUFFIX,chalungu.cn
 
   # > Amazon
   - IP-CIDR,13.32.0.0/16,no-resolve
