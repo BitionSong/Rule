@@ -1,6 +1,9 @@
 # > N26
 DOMAIN-SUFFIX,n26.com
 
+# > wise
+DOMAIN-SUFFIX,wise.com
+
 # > TestFlight
 DOMAIN,testflight.apple.com
 
